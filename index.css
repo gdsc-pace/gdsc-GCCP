@@ -1,110 +1,122 @@
-*{
-    font-family: 'Ubuntu', sans-serif;
-    scroll-behavior: smooth;
+/* styles.css */
+
+/* Add styles for the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
 }
 
-/* body::-webkit-scrollbar{
-    display: none;
-} */
+/* Add styles for the navbar */
 
-.d-inline-block{
-    margin-left: 60px;
-    height: 60px;
-    padding-bottom: 10px;
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add padding for spacing */
 }
 
-.adypulg{
-   height: 40px;
-   margin-bottom: 10px;
+/* Style the logo image */
+.navbar img {
+    max-width: 100%;
+    height: auto;
+}
+/* Add styles for the header text */
+.gccp_data h4 {
+    font-weight: 450;
+    font-size: 24px;
 }
 
-.p-2{
-    border-radius: 23px;
-    border:none;
-    outline: none;
-    padding: 20px;
-    box-shadow: -1px -1px 25px black;
+/* Add styles for the search input */
+.custom-menu__right {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.table{
-    border: black solid 3px;
-}
-
-.table thead{
-    border: black solid 3px;
-}
-
-.table thead tr th{
-    color: black;
-    font-size: 17px;
-}
-
-h4{
-    color: rgb(119, 115, 115);
-    padding-bottom: 25px;
-}
-
-.w-75 i {
-    position: absolute;
-}
-  
-.w-75 {
+/* Add styles for the table */
+.table {
     width: 100%;
-    margin-bottom: 10px;
-}
-  
-.icon {
-    padding: 13px;
-    min-width: 40px;
-    margin-left: 10px;
-    color: black;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.p-2 {
-    width: 100%;
-    padding: 10px;
+.table th, .table td {
+    padding: 2%;
     text-align: center;
-    margin-bottom: 3px;
 }
 
-.bgadypu{
-    height: 50px;
+.table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
 
-.gdscfoot{
-    height: 50px;
-    margin-left: 5px;
+/* Add styles for footer links */
+.footer-links a {
+    color: #000000;
+    margin-right: 10px;
+    font-size: 24px;
 }
 
-.mb-4{
-    margin-top: 10px;
+/* Add styles for the footer */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
 }
 
-.navbar{   
-    box-shadow: -1px -1px 25px black;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    z-index: 1;
+/* Media Query for Tablets (up to 768px) */
+@media screen and (max-width: 768px) {
+    /* Adjust the padding for smaller screens */
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Make the header text smaller */
+    .gccp_data h4 {
+        font-size: 20px;
+    }
+    
+    /* Center the search input on small screens */
+    .custom-menu__right {
+        justify-content: center;
+    }
+    
+    /* Make the table responsive */
+    .table {
+        overflow-x: auto;
+    }
+
 }
 
-.study{
-    color: rgb(233, 67, 53);
-}
-
-.jams{
-    color: rgb(255, 191, 0);
-}
-
-.num23{
-    color: rgb(60, 117, 232);
-}
-
-.sym-{
-    color: rgb(253, 187, 5);
-}
-
-.num24{
-    color: rgb(52, 168, 87);
+/* Media Query for Mobile (up to 576px) */
+@media screen and (max-width: 576px) {
+    /* Adjust the padding for extra small screens */
+    body {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    /* Make the header text even smaller */
+    .gccp_data h4 {
+        font-size: 18px;
+    }
+    
+    /* Reduce padding for the search input */
+    .custom-menu__right {
+        padding: 3px;
+    }
+    
+    /* Make the table more compact */
+    .table {
+        font-size: 10px;
+    }
 }
