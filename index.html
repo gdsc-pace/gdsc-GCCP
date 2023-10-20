@@ -128,6 +128,76 @@
                 <a class="text-dark" href="https://github.com/gdsc-pace" target="_blank">&copy; GDSC-PACE Team</a>
             </div>
         </footer>
+        <div id="congratulationsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2 >We're at Tier 3 and with your support, we aim to reach Tier 1 soon. Join us and complete the task quickly!</h2>
+                <h4>Out of 211, only 40 have finished. Let's all work together to achieve our goal swiftly! </h4>
+                <p>Your achievement inspires others. Let's motivate everyone to complete this quickly!</p>
+            </div>
+        </div>
+        <style>
+            /* Style the modal */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(49, 46, 46, 0.5); /* Background overlay with some transparency */
+            }
+        
+            /* Style the modal content */
+            .modal-content {
+                background-color: #665c60;
+                border: 3px solid rgb(46, 3, 3); /* Blue border */
+                color: black;
+                border-radius: 80px;
+                width: 50%;
+                margin: 20% auto;
+                padding: 20px;
+                text-align: center;
+                backdrop-filter: blur(5px); /* Apply blur effect to the background */
+            }
+        
+            /* Style the close button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        </style>
+        
+        
+        <script>
+            // Function to display the modal
+            function displayCongratulationsModal() {
+                var modal = document.getElementById('congratulationsModal');
+                var closeModal = document.getElementById('closeModal');
+                
+                // Show the modal
+                modal.style.display = 'block';
+                
+                // Close the modal when the close button is clicked
+                closeModal.onclick = function() {
+                    modal.style.display = 'none';
+                }
+                
+                // Close the modal when clicking outside the modal
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            }
+        
+            // Call the function to display the modal when the page loads
+            window.onload = displayCongratulationsModal;
+        </script>
+                        
 
         
     </body>
